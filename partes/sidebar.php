@@ -10,8 +10,8 @@
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-users"></i>
                     Usuarios</a>
 
-                <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
-                    Arriendos</a>
+                <a href="../vistas/conserjeria.php" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
+                    Conserjería</a>
 
                 <a href="../" class="d-block text-light p-3 border-0"><i class="fas fa-drumstick-bite"></i>
                 Contratos</a>
