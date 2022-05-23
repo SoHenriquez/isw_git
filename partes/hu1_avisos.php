@@ -2,7 +2,7 @@
 
 <table class="table">
   <thead>
-    <tr>
+    <tr class="bg-primary" style="color:white">
       <th scope="col-1">#</th>
       <th scope="col-1">Correo</th>
       <th scope="col-1">Nombre</th>
