@@ -24,28 +24,30 @@
                 </div>
             </div>
         </section>
-        <section class="py-0 my-0">
+        <section class=" my-0" style="padding-bottom: 1rem;">
             <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                <h1 class="font-weight-bold mb-0">Avisos de Destacados</h1>
+                <h2 class="font-weight-bold mb-0">Avisos de Consergería</h2>
                 </div>
-                <div class=" dropdown col-lg-2 col-md-4 d-flex" style="justify-content:center; align-items:center;">
-                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="simpleDropdown" data-bs-toggle="dropdown" aria-expanded="false" >+ Agregar</a>
-                    <ul class="dropdown-menu" >
-                        <option class="dropdown-item" style='cursor:pointer;' value="2" data-bs-toggle="modal" data-bs-target="#NuevaBitacora">Bitacora</option>
-                        <option class="dropdown-item" style='cursor:pointer;' value="2" data-bs-toggle="modal" data-bs-target="#NuevaEncomienda">Encomienda</option>
-                        <option class="dropdown-item" style='cursor:pointer;' value="2" data-bs-toggle="modal" data-bs-target="#NuevoAviso">Entrega de llave</option>
-                        <option class="dropdown-item" style='cursor:pointer;' value="2" data-bs-toggle="modal" data-bs-target="#NuevoAviso">Ingreso de visita</option>
-                    </ul>
-            </div>
+                <div class="col-lg-2 col-md-4 d-flex" style="justify-content:center; align-items:center;">
+                <button class="btn btn-primary w-100 align-self-center" data-bs-toggle="modal" data-bs-target="#NuevoAviso">+ Agregar</button>
+                
+                </div>
             </div>
             
         </section>
+        <div class="container">
+            
+        <?php include("../partes/hu1_avisos.php")?>
+        </div>
+        
     </div>
     
     </div>
     </div>
+    <?php include("../partes/hu1_modal_aviso.php")?>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

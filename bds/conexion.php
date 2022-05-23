@@ -12,8 +12,6 @@ if(!$con){
 
     echo 'No se puede conectar a la base de datos: ' .mysqli_connect_errno()();
 
-}else{
-    echo 'Conectadosky';
 }
 
 

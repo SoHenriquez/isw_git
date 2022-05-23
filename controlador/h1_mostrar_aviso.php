@@ -1,6 +1,6 @@
 <?php
 require_once("../bds/Conexion.php");
-    $query = "SELECT * FROM `avisos`";
-    $querysql = mysqli_query($con,$query);
+    $querysql = "SELECT * FROM `avisos`";
+    $query = mysqli_query($con,$querysql);
     
 ?>
