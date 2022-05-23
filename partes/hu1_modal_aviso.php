@@ -67,7 +67,7 @@
                 <br>
                 <div class="row">
                     <div class="form-group col-8">
-                    <input class="check-input " type="checkbox" name="destacado[]" value="1" id="flexCheckChecked" >
+                    <input class="check-input " type="checkbox" name="destacado" value="1" id="flexCheckChecked" >
                     <label>Destacar</label>
                     </div>
                     <div class="offset-2 ">
