@@ -1,6 +1,6 @@
 <?php
 
-require_once("../bds/Conexion.php");
+require_once("../bds/conexion.php");
 
 
 $tipo = $_POST['tipo'];
@@ -14,14 +14,10 @@ $destacado= $_POST['destacado'];
 
 $newDate = date("d/m/Y", strtotime($fecha));
 
-$CrearAvisoSql = "INSERT INTO avisos(tipo_aviso_clave, a_titulo, a_descripcion, a_fecha, a_hora, a_destacar) VALUES('$tipo','$titulo','$descripcion',".$newDate.",'$hora',".$destacado.");";
+$CrearAvisoSql = "INSERT INTO aviso(usuario_clave,tipo_aviso_clave, a_titulo, a_descripcion, a_fecha, a_hora, a_destacar) VALUES('1','$tipo','$titulo','$descripcion','$fecha','$hora',".$destacado.");";
 $CrearAviso = mysqli_query($con, $CrearAvisoSql);
 
-if($CrearAviso){
-    echo '<script>alert("Ingresado correctamente")</script>' ;
-}else{
-    echo '<script>alert("Error")</script>' ;
-}
-header("Location: http://localhost/plantillaAyudantia/vistas/conserjeria.php");
+
+header("Location: http://localhost/isw/isw_git/vistas/conserjeria.php");
 
 ?>
