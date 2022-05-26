@@ -23,7 +23,8 @@
         
                 </div>
                 <!-- Formulario Crear nuevo Aviso de Conserjería -->
-              <form action="../controlador/hu4_modificar_aviso.php" id="modificar_publicacion<?php echo $row['a_clave'];?>" method="POST">
+              <?php  if($consultaAvisosDest): foreach($consultaAvisosDest as $row): ?>
+              <form action="../controlador/hu4_modificar_aviso.php"  method="POST">
               <div class="row">
                   <div class="col-4">
                     <div>
@@ -48,7 +49,7 @@
                   <div class="col-1"></div>
                   <div class="col-3">
                     <label for="exampleInputPassword1" class="form-label">Fecha</label>
-                    <input type="date" class="form-control" id="datepicker" name="fecha_actualizar" value="<?php echo $row['a_fecha'];?>" required>
+                    <input type="date" class="form-control" id="datepicker" name="fecha_actualizar" value="<?php echo $row['fecha_formateada'];?>" required>
                   </div>
                 </div>
                   
@@ -59,7 +60,7 @@
                   <label >Comentario</label>
                     </div>
                     <div class="col-5 campo" >
-                    <textarea class="input-text form-control" name="descripcion_actualizar" value="<?php echo $row['a_descripcion'];?>" style="height: 135px; width:100%;"></textarea>
+                    <textarea class="input-text form-control" name="descripcion_actualizar"  style="height: 135px; width:100%;"><?php echo $row['a_descripcion'];?></textarea>
                     
                   </div>
                 </div>
@@ -68,10 +69,11 @@
                     <div class="col-5"></div>
                     <div class="col-1"><button type="reset" class="btn btn-primary"><i class="fa-solid fa-trash"></i>&nbsp</button></div>
                     <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit"  class="btn btn-primary">Enviar</button>
                     </div>
                 </div>
-                <input type="hidden" name="form_clave" value="<?php echo $row['a_clave']; ?>">
+                <input type="hidden" name="a_clave" value="<?php echo $row['a_clave']; ?>">
+                <?php endforeach; endif ?>
               </form>
             </div>
         </section>
