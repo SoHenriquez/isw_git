@@ -2,7 +2,6 @@
 <?php include('../partes/head.php') ?>
     <!-- fin head -->
 <?php require_once("../controlador/mostrar_avisos_destacados.php"); ?>
-
 <body>
     <div class="d-flex" id="content-wrapper">
      <!-- sideBar -->
@@ -36,17 +35,24 @@
                 <a href="../partes/hu1_modal_aviso.php" class="btn btn-primary w-100 align-self-center">Agregar</a>
                 
                 </div>
-                <div class="col-2">
-                <button class="btn btn-primary w-100 align-self-center dropdown-toggle" >Tipo</button>
-
+                <div class="dropdown col-2">
+                <form action="../controlador/mostrar_avisos_destacados.php" method="get">
+                    <select class="form-select btn btn-primary w-100 align-self-center" name="tipo_aviso_clave" required>
+                        <li><option class="dropdown-item bg-light" value="0" >Filtrar por</option></li>
+                        <li><option class="dropdown-item bg-light" value="Tipo_aviso_clave" selected>Tipo de Aviso</option></li>
+                        <li><option class="dropdown-item bg-light" value="2" >Fecha</option></li>
+                        <li><option class="dropdown-item bg-light" value="3" >Nombre</option></li>
+                    </select>   
+                </form>
                 </div>
             </div>
             
         </section>
         <div class="container">
         
-        <?php include("../partes/hu1_avisos.php")?>
+        <?php include("../partes/hu1_avisos.php");?>
         </div>
+
     </div>
     
     
@@ -71,4 +77,26 @@
         <!-- Dropdown -->
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="form-validation.js"></script>
+    <!-- Orden y filtro de datos de la tabla -->
+<script>
+        $(document).ready(function () {
+    var table = $('#orden').DataTable({"bPaginate": false, "dom": '<lf<t>>'});
+
+    
+    $('#body tbody').on('click', 'tr', function () {
+        var data = table.row(this).data();
+        alert('You clicked on ' + data[0] + "'s row");
+        
+    });
+});
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+<!-- fin datatable -->
 </body>

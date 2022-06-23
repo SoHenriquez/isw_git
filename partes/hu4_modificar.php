@@ -1,7 +1,10 @@
 <!-- head -->
 <?php include('../partes/head.php') ?>
     <!-- fin head -->
+    <!-- Incluye Query para mostrar aviso -->
+    
     <?php require_once("C:/xampp/htdocs/isw/isw_git/controlador/mostrar_avisos_destacados.php"); ?>
+    <!-- Fin incorporación de query oara mostrar aviso -->
 <body>
 <div class="d-flex" id="content-wrapper">
   <!-- sideBar -->
@@ -24,6 +27,7 @@
                 </div>
                 <!-- Formulario Crear nuevo Aviso de Conserjería -->
               <?php  if($consultaAvisosDest): foreach($consultaAvisosDest as $row): ?>
+                <?php  if($_GET['id'] == $row['a_clave']){?>
               <form action="../controlador/hu4_modificar_aviso.php"  method="POST">
               <div class="row">
                   <div class="col-4">
@@ -33,7 +37,8 @@
                   </div>
                   <div class="col-5">
                     <select class="form-select" name="tipo_aviso_actualizar" value="<?php echo $row['tipo_aviso_clave'];?>" required>
-                            <option value="1" selected>Bitacora</option>
+                            <option value="0" selected>Tipo de Registro </option>
+                            <option value="1">Bitacora</option>
                             <option value="2">Encomienda</option>
                             <option value="3">Otro</option>
                     </select>
@@ -48,7 +53,7 @@
                   </div> 
                   <div class="col-1"></div>
                   <div class="col-3">
-                    <label for="exampleInputPassword1" class="form-label">Fecha</label>
+                    <label for="exampleInputPassword1" class="form-label">Fecha antigua: <?php echo $row['fecha_formateada'];?></label>
                     <input type="date" class="form-control" id="datepicker" name="fecha_actualizar" value="<?php echo $row['fecha_formateada'];?>" required>
                   </div>
                 </div>
@@ -73,6 +78,7 @@
                     </div>
                 </div>
                 <input type="hidden" name="a_clave" value="<?php echo $row['a_clave']; ?>">
+                <?php }?>
                 <?php endforeach; endif ?>
               </form>
             </div>
