@@ -32,7 +32,7 @@
                 <h2 class="font-weight-bold mb-0">Avisos de Conserjería</h2>
                 </div>
                 <div class="col-lg-2 col-md-4 d-flex" style="justify-content:center; align-items:center;">
-                <a href="../partes/hu1_modal_aviso.php" class="btn btn-primary w-100 align-self-center">Agregar</a>
+                <a href="" class="btn btn-primary w-100 align-self-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar</a>
                 
                 </div>
                 <div class="dropdown col-2">
@@ -58,9 +58,10 @@
     
     </div>
     </div>
-    <?php include("../partes/hu1_modal_aviso.php")?>
-    
+    <?php include("../partes/hu4_modal_aviso.php")?>
+ 
     <!-- Optional JavaScript -->
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
